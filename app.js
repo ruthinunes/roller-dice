@@ -27,7 +27,22 @@ function animateDice(randomNumber, dice) {
       dice.classList.add('active');
     });
     audio.play();
+    addToHistory(dice);
   };
+};
+
+function addToHistory(dice){
+  const listItem = document.createElement("li");
+  const diceCopy = dice.cloneNode(true);
+  diceCopy.style.display = 'block';
+  diceCopy.querySelectorAll("span").forEach(function(dot){
+    dot.classList.remove('hide');
+  });
+
+  listItem.classList.add("history-item");
+  listItem.append(`You rolled a`);
+  listItem.append(diceCopy);
+  historyListElement.append(listItem);
 };
 
 rollButton.addEventListener('click', rollDice);
