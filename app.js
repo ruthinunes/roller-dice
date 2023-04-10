@@ -7,11 +7,11 @@ function rollDice() {
 
   dicesElement.forEach(function (dice) {
     dice.classList.remove('active');
-    checkHistory(randomNumber, dice);
+    animateDice(randomNumber, dice);
   });
 };
 
-function checkHistory(randomNumber, dice) {
+function animateDice(randomNumber, dice) {
   if (dice.id === `dice-${randomNumber}`) {
     const dots = Array.from(dice.children);
     const audio = new Audio('roll.mp3');
