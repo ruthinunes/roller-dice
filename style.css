@@ -45,7 +45,7 @@ h1 {
   margin-bottom: 4rem;
 }
 
-.dice-container{
+.dice-container {
   width: 100px;
   height: 150px;
 }
@@ -123,6 +123,7 @@ h1 {
 
 .active {
   animation: dice-roll 1s;
+  /* animation: dice-roll 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; */
   display: block;
 }
 
@@ -165,28 +166,26 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+
 @keyframes dice-roll {
-  0% {
-    transform: rotateY(360deg) rotateX(360deg);
-    filter: blur(5px);
-  }
 
-  25% {
-    transform: rotateY(600deg) rotateX(600deg);
-    filter: blur(5px);
-  }
-
-  50% {
-    transform: rotateY(270deg) rotateX(270deg);
-    filter: blur(5px);
-  }
-
-  75% {
-    transform: rotateY(-45deg) rotateX(-45deg);
-    filter: blur(5px);
-  }
-
+  0%,
   100% {
-    transform: rotateY(-360deg) rotateX(-360deg);
+    transform: translate(0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-20%, 0%, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(20%, -5%, 0);
   }
 }
