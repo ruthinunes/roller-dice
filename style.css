@@ -50,15 +50,6 @@ h2 {
   align-items: center;
 }
 
-.active {
-  animation: dice-roll 1s;
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 /* buttons */
 button {
   background-color: var(--primary-color);
@@ -86,52 +77,6 @@ button:hover {
   justify-self: end;
 }
 
-/* HISTORY */
-.history {
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px; */
-  text-align: center;
-  width: 100%;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  padding: 1rem 1.5rem;
-}
-
-.history-header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.history-header.switch-display {
-  justify-content: space-between;
-}
-
-.history-item {
-  font-size: 1.8rem;
-  padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 0.1px solid var(--primary-color);
-}
-
-.history-item:first-of-type {
-  margin-top: 2rem;
-}
-
-.history-item:last-of-type {
-  border: none;
-}
-
-.history-item .dice {
-  margin-bottom: 0;
-  width: 50px;
-  height: 50px;
-  box-shadow: none;
-  border-radius: 2px;
-  border: 1px solid var(--primary-color);
-}
 
 /* DICES */
 .dice-container {
@@ -268,6 +213,62 @@ button:hover {
 .history-item .dice-six .dot:nth-child(5) {
   top: 20px;
   left: 33px;
+}
+
+.active {
+  animation: dice-roll 1s;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* HISTORY */
+.history {
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px; */
+  text-align: center;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+}
+
+.history-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.history-header.switch-display {
+  justify-content: space-between;
+}
+
+.history-item {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.1px solid var(--primary-color);
+}
+
+.history-item:first-of-type {
+  margin-top: 2rem;
+}
+
+.history-item:last-of-type {
+  border: none;
+}
+
+.history-item .dice {
+  margin-bottom: 0;
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid var(--primary-color);
 }
 
 /* animation */
