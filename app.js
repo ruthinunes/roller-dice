@@ -1,5 +1,7 @@
 const dicesElement = document.querySelectorAll(".dice");
 const rollButton = document.querySelector("#rollButton");
+const clearButton = document.querySelector("#clearButton");
+const historyHeader = document.querySelector('.history-header');
 const historyListElement = document.querySelector("#historyList");
 
 function rollDice() {
@@ -26,7 +28,7 @@ function animateDice(randomNumber, dice) {
     setTimeout(function () {
       dice.classList.add('active');
     });
-    audio.play();
+    // audio.play();
     addToHistory(dice);
   };
 };
@@ -34,15 +36,32 @@ function animateDice(randomNumber, dice) {
 function addToHistory(dice){
   const listItem = document.createElement("li");
   const diceCopy = dice.cloneNode(true);
+
   diceCopy.style.display = 'block';
   diceCopy.querySelectorAll("span").forEach(function(dot){
     dot.classList.remove('hide');
   });
 
   listItem.classList.add("history-item");
+
+  setTimeout(function(){
   listItem.append(`You rolled a`);
   listItem.append(diceCopy);
   historyListElement.append(listItem);
+  historyHeader.classList.add('switch-display');
+  clearButton.classList.remove('hide');
+  },1300);
+  
+  clearButton.addEventListener('click', clearHistory);
+};
+
+function clearHistory() {
+  clearButton.classList.add('hide');
+  historyHeader.classList.remove('switch-display');
+
+  while (historyListElement.firstChild) {
+    historyListElement.removeChild(historyListElement.firstChild);
+  };
 };
 
 rollButton.addEventListener('click', rollDice);
