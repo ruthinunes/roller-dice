@@ -28,7 +28,7 @@ function animateDice(randomNumber, dice) {
     setTimeout(function () {
       dice.classList.add('active');
     });
-    // audio.play();
+    audio.play();
     addToHistory(dice);
   };
 };
@@ -45,7 +45,7 @@ function addToHistory(dice){
   listItem.classList.add("history-item");
 
   setTimeout(function(){
-  listItem.append(`You rolled a`);
+  listItem.append(`You rolled`);
   listItem.append(diceCopy);
   historyListElement.append(listItem);
   historyHeader.classList.add('switch-display');
