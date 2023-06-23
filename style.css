@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 *,
 ::after,
@@ -16,6 +16,15 @@
   --secondary-color: #607890;
   --accent-color: #f9bc60;
   --background-color: #f5f5f5;
+  --box-shadow-color: 30, 42, 58;
+}
+
+.dark-theme {
+  --primary-color: #f5f5f5;
+  --secondary-color: #607890;
+  --accent-color: #f9bc60;
+  --background-color: #1e2a3a;
+  --box-shadow-color: 245, 245, 245;
 }
 
 html {
@@ -24,8 +33,9 @@ html {
 
 body {
   background-color: var(--background-color);
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -41,9 +51,14 @@ h2 {
   font-size: 2rem;
 }
 
+.header-btn {
+  margin: 2rem 0;
+  padding: 0.7rem 1rem;
+  text-transform: capitalize;
+}
+
 /* main */
 .container {
-  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -62,7 +77,7 @@ button {
 
 button:hover {
   background-color: var(--accent-color);
-  color: var(--background-color);
+  color: #f5f5f5;
 }
 
 .roll-button {
@@ -77,7 +92,6 @@ button:hover {
   justify-self: end;
 }
 
-
 /* DICES */
 .dice-container {
   width: 100px;
@@ -87,7 +101,7 @@ button:hover {
 .dice {
   display: none;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(var(--box-shadow-color), 0.35) 0px 5px 15px;
   height: 100px;
   position: relative;
   width: 100px;
@@ -102,7 +116,7 @@ button:hover {
   width: 20px;
 }
 
-/* placing bigger dice dots */
+/* placing main dice dots */
 .dice-one .dot,
 .dice-five .dot:nth-child(4) {
   top: 40px;
@@ -231,6 +245,7 @@ button:hover {
   border: 1px solid var(--primary-color);
   border-radius: 5px;
   padding: 1rem 1.5rem;
+  color: var(--primary-color);
 }
 
 .history-header {
@@ -272,7 +287,6 @@ button:hover {
 
 /* animation */
 @keyframes dice-roll {
-
   0%,
   100% {
     transform: translate(0, 0);
