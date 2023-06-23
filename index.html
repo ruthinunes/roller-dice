@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Dice roller</title>
-</head>
-<body>
+  </head>
+
+  <body>
+    <header>
+      <button class="header-btn">dark mode</button>
+    </header>
     <main class="container">
-		<h1>Roll Dice Simulator</h1>
-		<div class="dice-container">
-			<div class="dice dice-one active" id="dice-1">
-				<span class="dot"></span>
-			</div>
-			<div class="dice dice-two" id="dice-2">
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-			<div class="dice dice-three" id="dice-3">
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-			<div class="dice dice-four" id="dice-4">
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-			<div class="dice dice-five" id="dice-5">
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-			<div class="dice dice-six" id="dice-6">
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-		</div>
-			<button class="roll-button" id="rollButton">ROLL DICE</button>
-		<div class="history">
-			<div class="history-header">
-				<h2>History</h2>
-				<button class="clear-button hide" id="clearButton">Clear</button>
-			</div>
-			<ul class="history-list" id="historyList"></ul>
-		</div>
-	</main>
+      <h1>Roll Dice Simulator</h1>
+      <div class="dice-container">
+        <div class="dice dice-one active" id="dice-1">
+          <span class="dot"></span>
+        </div>
+        <div class="dice dice-two" id="dice-2">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="dice dice-three" id="dice-3">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="dice dice-four" id="dice-4">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="dice dice-five" id="dice-5">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="dice dice-six" id="dice-6">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <button class="roll-button" id="rollButton">ROLL DICE</button>
+      <div class="history">
+        <div class="history-header">
+          <h2>History</h2>
+          <button class="clear-button hide" id="clearButton">Clear</button>
+        </div>
+        <ul class="history-list" id="historyList"></ul>
+      </div>
+    </main>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
