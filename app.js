@@ -1,7 +1,7 @@
 const dicesElement = document.querySelectorAll(".dice");
 const rollButton = document.querySelector("#rollButton");
 const clearButton = document.querySelector("#clearButton");
-const changeModeButton = document.querySelector(".header-btn");
+const themeButton = document.querySelector("#checkBtn");
 const historyHeader = document.querySelector(".history-header");
 const historyListElement = document.querySelector("#historyList");
 
@@ -65,12 +65,9 @@ function clearHistory() {
   }
 }
 
-function changeMode() {
+function changeTheme() {
   document.documentElement.classList.toggle("dark-theme");
-  document.documentElement.classList.contains("dark-theme")
-    ? (changeModeButton.textContent = "Light Mode")
-    : (changeModeButton.textContent = "Dark Mode");
 }
-
+//
+themeButton.addEventListener("click", changeTheme);
 rollButton.addEventListener("click", rollDice);
-changeModeButton.addEventListener("click", changeMode);
