@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b2bd08b712.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Dice roller</title>
   </head>
 
   <body>
-    <header>
-      <button class="header-btn">dark mode</button>
-    </header>
     <main class="container">
       <h1>Roll Dice Simulator</h1>
       <div class="dice-container">
@@ -49,6 +50,14 @@
           <span class="dot"></span>
         </div>
       </div>
+      <div>
+        <input type="checkbox" id="checkBtn" class="check-btn" />
+        <label class="check-btn-label" for="checkBtn">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <div class="check-tag"></div>
+        </label>
+      </div>
       <button class="roll-button" id="rollButton">ROLL DICE</button>
       <div class="history">
         <div class="history-header">
@@ -58,7 +67,6 @@
         <ul class="history-list" id="historyList"></ul>
       </div>
     </main>
-
     <script src="app.js"></script>
   </body>
 </html>
