@@ -38,23 +38,60 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s linear;
 }
 
 /* titles */
 h1 {
   color: var(--primary-color);
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin: 3rem 0;
 }
 
 h2 {
   font-size: 2rem;
 }
 
-.header-btn {
-  margin: 2rem 0;
-  padding: 0.7rem 1rem;
-  text-transform: capitalize;
+/* theme button */
+.check-btn {
+  opacity: 0;
+  position: absolute;
+}
+
+.check-btn-label {
+  margin-bottom: 3rem;
+  background-color: var(--background-color);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+  font-size: 1.3rem;
+  width: 40px;
+  transform: scale(1.5);
+  box-shadow: rgba(var(--box-shadow-color), 0.35) 0px 5px 15px;
+}
+
+.check-btn-label i{
+  color: var(--primary-color)
+}
+
+.check-btn-label .check-tag {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75px;
+  left: 4px;
+  height: 15px;
+  width: 15px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+input[type=checkbox]:checked + .check-btn-label .check-tag {
+  transform: translateX(17px);
 }
 
 /* main */
@@ -95,7 +132,7 @@ button:hover {
 /* DICES */
 .dice-container {
   width: 100px;
-  height: 150px;
+  height: 130px;
 }
 
 .dice {
@@ -105,7 +142,6 @@ button:hover {
   height: 100px;
   position: relative;
   width: 100px;
-  margin-bottom: 4rem;
 }
 
 .dice .dot {
@@ -216,7 +252,7 @@ button:hover {
 .history-item .dice-five .dot:nth-child(3),
 .history-item .dice-six .dot:nth-child(3) {
   top: 35px;
-  right: 33px;
+  right: 34px;
 }
 
 .history-item .dice-six .dot:nth-child(4) {
