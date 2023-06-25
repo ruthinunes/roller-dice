@@ -53,45 +53,39 @@ h2 {
 }
 
 /* theme button */
-.check-btn {
+.theme-btn-ctn {
+  margin-bottom: 3rem;
+  width: 50px;
+}
+
+.theme-btn {
   opacity: 0;
   position: absolute;
 }
 
-.check-btn-label {
-  margin-bottom: 3rem;
+.theme-btn-label {
   background-color: var(--background-color);
   border-radius: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  position: relative;
+  justify-content: start;
+  padding: 0.7rem;
   font-size: 1.3rem;
-  width: 40px;
-  transform: scale(1.5);
   box-shadow: rgba(var(--box-shadow-color), 0.35) 0px 5px 15px;
 }
 
-.check-btn-label i{
-  color: var(--primary-color)
-}
-
-.check-btn-label .check-tag {
+.theme-btn-label .check-tag {
   background-color: var(--primary-color);
   border-radius: 50%;
-  position: absolute;
-  top: 3.75px;
-  left: 4px;
   height: 15px;
   width: 15px;
   transform: translateX(0px);
   transition: transform 0.2s linear;
 }
 
-input[type=checkbox]:checked + .check-btn-label .check-tag {
-  transform: translateX(17px);
+input[type="checkbox"]:checked + .theme-btn-label .check-tag {
+  transform: translateX(20px);
 }
 
 /* main */
